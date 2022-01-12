@@ -1,0 +1,30 @@
+.pulsate {
+    animation-name: pulsate;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.textFade:before{
+    content: 'Presenting: Malthe Gram';
+    animation-name: textFade;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textFade {
+
+    0% {font-size: 100%; opacity: 1; content: "Hi! I'm Malthe Gram"; }
+    25% {opacity: 0.50; content: "Hi! I'm Malthe Gram";}
+    50% {font-size: 150%; opacity: 0; content: "Hi! I'm Malthe Gram ";}
+    51% {opacity: 0; content: "Read all about me and my capabilities on the coming pages"}
+    75% {opacity: 0.75; content: "Read all about me and my capabilities on the coming pages" }
+    100% { font-size: 100%; opacity: 1; content: "Read all about me and my capabilities on the coming pages! WORK IN PROGRESS";}
+}
+
+@keyframes pulsate {
+    0% { font-size: inherit;}
+    50% { font-size: 5rem; }
+    100% { font-size: 24px;}
+}

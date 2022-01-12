@@ -1,0 +1,210 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+
+}
+html{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: auto   ;
+}
+
+#grid{
+    display: grid;
+    justify-content: center;
+    margin: 0 8rem;
+    grid-gap: 15rem;
+    grid-template-columns: repeat(2,40%);
+    grid-template-rows: repeat(3, 25%);
+    font-size: 1.3rem;
+}
+.one{
+    color: var(--text-color);
+}
+.two{
+    color: var(--text-color);
+}
+.three{
+    color: var(--text-color);
+}
+.four{
+    color: var(--text-color);
+}
+.grid{
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2,50%);
+}
+.about-me-img{
+    height: 25%;
+    width: 80%;
+}
+
+.card{
+    display: block;
+    background: linear-gradient(rgba(148, 137, 137, 0.62), rgba(136, 128, 128, 0.38));
+    border: 1pt solid hsl(0deg, 0%, 90%);
+    margin: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    width: calc(100% - 10vw);
+    align-content: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 0 0;
+    gap: 1rem;
+}
+
+.content {
+    height: 200vh;
+    background-image: url(//unsplash.it/1000/1000);
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+/* Tooltip text */
+.tooltip > .tooltip-text {
+    font-size: 0.8rem;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 70%);
+
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+section {
+    display: block;
+    background: #CFF;
+    height: 100%;
+    width:100%;
+    padding: 60px 0 60px 120px;
+    box-sizing: border-box;
+}
+section > h1{
+    font-size: 2rem;
+    margin-left: 1rem ;
+}
+.underLine:hover {
+    text-decoration: underline;
+}
+
+#about {
+    background: #111816;
+    color: var(--text-color);
+}
+#blog {
+    background: #123037;
+    color: var(--text-color);
+}
+#contact {
+    background: #333;
+    color: var(--text-color);
+}
+#welcome{
+    background: #222222;
+    color: var(--text-color);
+}
+
+.back-to-home {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    border-radius: 100%;
+    background: var(--background);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    opacity: 100%;
+    font-size: 1rem;
+    visibility: visible;
+}
+.back-to-home-invis{
+    visibility: hidden;
+}
+::placeholder{
+    color: black;
+}
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    display: inline-block;
+
+    border: 1px solid #ccc;
+    border-radius: 2.5rem;
+    color: black;
+
+    box-sizing: border-box;
+    resize: none;
+
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: var(--background);
+    color: white;
+
+    border: none;
+    padding: 14px 20px;
+    margin: 8px 0;
+
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+details a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+ul > li > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+ul > li > a:hover {
+    text-decoration: underline;
+}
+li > img {
+    mix-blend-mode: color;
+    border-radius: 50%;
+    height: 1em;
+}

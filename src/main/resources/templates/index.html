@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" th:href="@{css/nav.css}">
+    <link rel="stylesheet" th:href="@{css/animations.css}">
+    <link rel="stylesheet" th:href="@{css/styles.css}">
+    <meta charset="UTF-8">
+    <title>| Malthe Gram |</title>
+</head>
+<body>
+
+<header>
+
+    <a class="tooltip" href="#about">
+        <img class="logo" th:src="@{images/myLogo.jpeg}" alt="myLogo">
+    </a>
+    <nav id="top">
+        <ul>
+
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+
+<main>
+    <div>
+        <section id="welcome">
+            <h1 class="textFade"></h1>
+            <div class="card">
+                <div id="grid">
+                    <div class="one">
+                        <h3 class="tooltip">My tools<span class="tooltip-text">Click on a tool name to go to it's description</span></h3>
+                        <ul>
+                            <li>Visual Paradigm</li>
+                            <li>IntelliJ by <a href="https://www.jetbrains.com/">JetBrains</a></li>
+                            <li><a href="#polypane">Polypane</a></li>
+                            <li><a href="#springboot">Springboot</a></li>
+                            <li>MySQL WorkBench</li>
+                        </ul>
+                        <p id="polypane"></p>
+                        <p id="springboot"></p>
+                    </div>
+                    <div class="two">
+                        <h3>Known languages</h3>
+                        <ul>
+                            <li>HTML
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark"></li>
+                            <li>CSS
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                            </li>
+                            <li>Java
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                            </li>
+                            <li>MySQL
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                            </li>
+                            <li>JavaScript
+                                <img th:src="@{images/checkMark.png}" alt="checkMark">
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="three">
+                        <h3>Something 3</h3>
+                    </div>
+                    <div class="four">
+                        <h3>Something 4</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="about">
+            <h1>Who am I?</h1>
+            <div class="card">
+                <h3>My path to being a programmer</h3>
+                <div class="grid">
+                    <p>Im currently studying Computer Science AP @<a class="tooltip" href="https://kea.dk/en/programmes/academy-profession-degree/computer-science">
+                        <span class="tooltip-text">Click here to see my education</span>KEA</a><br>
+                        For the past year I've been learning Java as my primary language. 1st semester was purely about learning Java and how to program object orientated.
+                        The learning curve was steep at first since I had no prior experience coding. Nevertheless, I kept up with class and found my footing.
+                        <br>
+                        2nd. semester was a bit more interesting. Early on we began learning HTML and CSS. And that was just the first step, before we began with Spring Boot.
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur distinctio dolore ipsum perferendis, repellendus temporibus velit. Architecto consequatur cumque doloremque dolores expedita explicabo, magni non numquam omnis pariatur sequi vero.</span><span>Eius odio pariatur perspiciatis ratione? Enim ipsa iste nesciunt nulla perspiciatis placeat reiciendis sed, tempore ullam voluptas! Atque commodi consequatur dolorum eius, expedita ipsa nesciunt, optio sed tenetur unde vel!</span><span>Aliquam dolor error ex fugit id ipsa ipsum, iusto, minus modi natus nemo nobis nulla possimus quasi quidem tempore veniam! Consequuntur esse iure magni nostrum officia praesentium quos repudiandae sequi.</span><span>Aliquid culpa dignissimos eum eveniet ipsum, labore libero molestiae numquam optio porro sunt tempore vitae voluptatibus? Accusamus dolor, eum excepturi explicabo harum nobis numquam porro, quis soluta, suscipit ullam velit?</span><span>Eligendi nulla odio praesentium quibusdam reiciendis. Blanditiis doloribus error et eveniet magnam minima odio officiis ut velit voluptatem. Assumenda dignissimos earum eos in nostrum porro quo rem vel veniam vero.</span><span>Architecto cumque debitis fugiat ipsam neque perferendis quisquam, rem sunt! Adipisci aspernatur atque commodi dolor doloribus ea eveniet inventore libero magnam, minus nam nemo, optio recusandae sunt ut voluptate voluptatibus.</span><span>Mollitia praesentium sit voluptatem voluptatibus? At consequatur deserunt ea earum enim ex ipsa labore, nihil, nobis nostrum odit omnis quibusdam quisquam quos rem sint suscipit temporibus vero voluptatem voluptatibus. Alias.</span><span>Dolorum id, illo inventore ipsam iste nesciunt quia? Ab adipisci aliquam amet aperiam architecto delectus dicta doloremque dolorum earum, esse inventore iure iusto labore nesciunt optio placeat quos sit tempore.</span><span>Assumenda, exercitationem, quis! Dicta, impedit, porro! Beatae earum enim ex impedit, perspiciatis provident veritatis voluptatibus? Adipisci amet asperiores cumque, dolorem expedita impedit ipsa modi nam nulla sed veritatis vero voluptatem!</span><span>Adipisci alias commodi cum doloribus eligendi expedita impedit ipsa mollitia nam nobis nostrum officia omnis possimus quod saepe soluta, tenetur ut velit voluptatem voluptatum. A minima nobis temporibus vero voluptatibus?</span><span>Ad adipisci aliquam architecto asperiores consequatur consequuntur delectus dignissimos eligendi illum ipsam minus natus nemo, nulla omnis, porro rerum similique sit totam ut voluptatum. Animi aspernatur dicta itaque qui tempore.</span><span>Accusantium consequuntur cum enim facere maiores, mollitia neque placeat quaerat, quo, rem repellendus suscipit? Aperiam consequatur ducimus, ex in labore nemo optio qui quo. Aliquid dolores illo possimus quos voluptates?</span><span>A consectetur distinctio, dolorem eum ex exercitationem expedita explicabo fugiat ipsa laboriosam laborum libero maiores omnis quasi repellat sunt veniam. Aperiam assumenda at debitis deleniti ea exercitationem quam quibusdam sit.</span><span>Accusantium aperiam asperiores blanditiis commodi consequatur consequuntur cupiditate dolor doloribus eius eligendi exercitationem harum illo, laboriosam laborum magni maxime minus mollitia nesciunt obcaecati omnis quasi rerum sint tempore voluptatem voluptates!</span><span>Ad aliquid at autem eligendi est et, fugiat ipsa ipsam iste minus nam natus, necessitatibus nulla obcaecati odio omnis quam qui ratione sit soluta temporibus totam velit! Earum, expedita provident?</span><span>Animi corporis culpa distinctio dolorum illo illum inventore natus, nobis porro quas quasi qui quo vel voluptatem voluptatibus! Consequatur corporis enim error magni molestiae necessitatibus nobis quam qui sapiente voluptatibus?</span><span>Ab adipisci amet animi, aperiam, consequatur cumque cupiditate dolor expedita explicabo fugit harum illo impedit inventore itaque libero magnam nam necessitatibus nisi praesentium quas quisquam quo quod rerum ut voluptatum!</span><span>Amet at atque aut autem commodi consequuntur corporis culpa doloremque ea earum esse eum, explicabo facilis impedit maiores nemo nesciunt nobis obcaecati perspiciatis quidem quisquam sequi temporibus! Cupiditate, quae, vel.</span><span>Animi aperiam, aspernatur consequatur consequuntur ducimus eius et facilis fugit, hic inventore ipsa non perferendis perspiciatis quasi repellat repellendus sapiente tenetur ut vitae voluptas. Ex molestias quas ullam vitae voluptatibus?</span><span>Accusantium culpa dolores dolorum, eligendi enim eveniet harum id in incidunt inventore laborum libero, nam nemo optio provident reiciendis sit soluta tenetur ut, voluptatum! Dolorum molestiae officiis praesentium quidem temporibus.</span><span>Consequatur culpa delectus eum eveniet harum iure nesciunt pariatur reiciendis suscipit voluptatem? Amet consectetur culpa eos fugit illo odit. Asperiores autem consectetur fuga fugiat illo porro quas rem sed sint.</span><span>Ab beatae blanditiis consequatur culpa debitis dicta dolorem doloremque ducimus incidunt magnam molestias omnis, quam quibusdam quisquam quos ratione repellendus reprehenderit sequi soluta, ut! Corporis cupiditate ex praesentium quae tenetur!</span><span>Accusantium at autem dicta dignissimos eos eum facere harum inventore laborum maiores, modi odit officiis quaerat quam sit velit veniam? Adipisci autem delectus odit officiis repellendus soluta sunt veritatis voluptate!</span><span>A ad aperiam eum fugit illum ipsa ipsum iure laboriosam, maxime odio. Assumenda consequuntur delectus ipsa natus obcaecati pariatur perspiciatis placeat repudiandae sequi tenetur? Ab fugiat iste praesentium unde voluptas!</span><span>Accusantium amet aspernatur beatae consequatur debitis distinctio dolores ea, earum enim error excepturi facere, incidunt laborum libero maiores molestias, mollitia necessitatibus non qui quos ratione vel veniam voluptatum. Animi, sit.</span>
+                    </p>
+                    <img class="about-me-img" th:src="@{images/myLogo.jpeg}" alt="myLogo">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="contact">
+            <h1>Contact me!</h1>
+            <div class="card">
+                <div><h3>Feel free to contact me!</h3></div>
+                <form action="https://formsubmit.co/31e4e52724b6ecafaf97c26d18b70a96" method="POST">
+                    <div>
+                        <label for="name">Name</label>
+                        <input placeholder="Name" type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input placeholder="user@example.com" type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div>
+                        <label for="message">Your Message</label>
+                        <textarea placeholder="Your message" id="message" cols="60" rows="3" name="message"></textarea>
+                    </div>
+
+                    <input type="hidden" id="subject" name="_subject" value="New submission!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button class="submitBtn" type="submit">Send message!</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <details>
+                    <summary>Reach me via social medias!</summary>
+                    <ul>
+                        <li><a href="https://www.facebook.com/malthegram">Facebook!</a></li>
+                        <li><a href="https://www.linkedin.com/in/malthe-gram-757166206/">LinkedIn!</a></li>
+                    </ul>
+                </details>
+
+            </div>
+        </section>
+    </div>
+    <div>
+        <a id="toTop" class="back-to-home-invis" href="#top">Go to top</a>
+    </div>
+
+</main>
+
+<footer>
+</footer>
+
+
+
+</body>
+</html>
